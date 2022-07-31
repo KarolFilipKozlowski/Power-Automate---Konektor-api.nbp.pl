@@ -1,0 +1,107 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_cre80-5fkursy-20walut-20nbp-5f9f745961df205669": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcre805fkursy20walut20nbp5f9f745961df205669_3c05c"
+        },
+        "api": {
+          "name": "shared_cre80-5fkursy-20walut-20nbp-5f9f745961df205669",
+          "logicalName": "cre80_5Fkursy-20walut-20nbp"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "458628f5-f258-4d51-873c-5aeac7335b81"
+          },
+          "type": "Request",
+          "kind": "PowerAppV2",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "waluta",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "text"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Kurs_określonej_waluty": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "06153bf7-24e4-4a62-b706-2b75735aa61e"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_cre80-5fkursy-20walut-20nbp-5f9f745961df205669",
+              "operationId": "table_code",
+              "apiId": ""
+            },
+            "parameters": {
+              "table": "A",
+              "code": "@triggerBody()['text']",
+              "Accept": "application/json"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Respond_to_a_PowerApp_or_flow": {
+          "runAfter": {
+            "Kurs_określonej_waluty": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f6507639-ed99-4da5-8883-ec8ada0d04b0"
+          },
+          "type": "Response",
+          "kind": "PowerApp",
+          "inputs": {
+            "statusCode": 200,
+            "body": {
+              "return": "@{body('Kurs_określonej_waluty')?['rates'][0]['mid']}"
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "return": {
+                  "title": "return",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "schemaVersion": "1.0.0.0"
+}

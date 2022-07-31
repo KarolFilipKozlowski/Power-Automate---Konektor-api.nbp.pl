@@ -1,0 +1,88 @@
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entities></Entities>
+  <Roles></Roles>
+  <Workflows>
+    <Workflow WorkflowId="{8fde32d5-cf10-ed11-b83d-000d3ada9e5f}" Name="Flow dla konektora kursów walut">
+      <JsonFileName>/Workflows/Flowdlakonektorakurswwalut-8FDE32D5-CF10-ED11-B83D-000D3ADA9E5F.json</JsonFileName>
+      <Type>1</Type>
+      <Subprocess>0</Subprocess>
+      <Category>5</Category>
+      <Mode>0</Mode>
+      <Scope>4</Scope>
+      <OnDemand>0</OnDemand>
+      <TriggerOnCreate>0</TriggerOnCreate>
+      <TriggerOnDelete>0</TriggerOnDelete>
+      <AsyncAutodelete>0</AsyncAutodelete>
+      <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+      <StateCode>1</StateCode>
+      <StatusCode>2</StatusCode>
+      <RunAs>1</RunAs>
+      <IsTransacted>1</IsTransacted>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <BusinessProcessType>0</BusinessProcessType>
+      <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+      <PrimaryEntity>none</PrimaryEntity>
+      <LocalizedNames>
+        <LocalizedName languagecode="1033" description="Flow dla konektora kursów walut" />
+      </LocalizedNames>
+    </Workflow>
+  </Workflows>
+  <FieldSecurityProfiles></FieldSecurityProfiles>
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <EntityDataProviders />
+  <CanvasApps>
+    <CanvasApp>
+      <Name>cre80_testkonektorakurswwalut_9d02e</Name>
+      <AppVersion>2022-07-31T13:29:32Z</AppVersion>
+      <Status>Ready</Status>
+      <CreatedByClientVersion>3.22072.25.0</CreatedByClientVersion>
+      <MinClientVersion>3.22072.25.0</MinClientVersion>
+      <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22072.25","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false"}</Tags>
+      <IsCdsUpgraded>0</IsCdsUpgraded>
+      <GalleryItemId xsi:nil="true"></GalleryItemId>
+      <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+      <DisplayName>Test konektora kursów walut</DisplayName>
+      <Description xsi:nil="true"></Description>
+      <CommitMessage xsi:nil="true"></CommitMessage>
+      <Publisher xsi:nil="true"></Publisher>
+      <AuthorizationReferences>[]</AuthorizationReferences>
+      <ConnectionReferences>{"b355f304-61d7-4e7e-a6e5-8f5f3581fa0c":{"id":"/providers/microsoft.powerapps/apis/shared_logicflows","displayName":"Logic flows","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png","dataSources":["Flowdlakonektorakursówwalut"],"dependencies":["13a3d22f-6038-4f86-8eba-c9cafd9c34b2"],"dependents":[],"parameterHints":{"workflowName":{"value":"44d2141e-faf3-42f0-8904-98e9f852214a"},"workflowEntityId":{"value":"8fde32d5-cf10-ed11-b83d-000d3ada9e5f"},"13a3d22f-6038-4f86-8eba-c9cafd9c34b2":{"value":"shared_cre80-5fkursy-20walut-20nbp-5f9f745961df205669"}},"parameterHintsV2":{"workflowName":{"value":"44d2141e-faf3-42f0-8904-98e9f852214a"},"workflowEntityId":{"value":"8fde32d5-cf10-ed11-b83d-000d3ada9e5f"},"shared_cre80-5fkursy-20walut-20nbp-5f9f745961df205669":{"value":"13a3d22f-6038-4f86-8eba-c9cafd9c34b2"}},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["Run"],"isCustomApiSolutionAware":false},"13a3d22f-6038-4f86-8eba-c9cafd9c34b2":{"id":"/providers/microsoft.powerapps/apis/shared_cre80-5fkursy-20walut-20nbp-5f9f745961df205669","displayName":"Kursy walut NBP","iconUri":"https://prodapiicons.cdn.powerappscdn.net/20220731t000000z361f3d60a8d446feb57919f1c0865686/customconnectoricon.jpg","dataSources":[],"dependencies":[],"dependents":["b355f304-61d7-4e7e-a6e5-8f5f3581fa0c"],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","customApiLogicalName":"cre80_5Fkursy-20walut-20nbp","isCustomApiSolutionAware":true}}</ConnectionReferences>
+      <DatabaseReferences>{}</DatabaseReferences>
+      <AppComponents>[]</AppComponents>
+      <AppComponentDependencies>[]</AppComponentDependencies>
+      <CanConsumeAppPass>1</CanConsumeAppPass>
+      <CanvasAppType>0</CanvasAppType>
+      <BypassConsent>0</BypassConsent>
+      <AdminControlBypassConsent>0</AdminControlBypassConsent>
+      <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <CdsDependencies>{"cdsdependencies":[{"logicalname":"cre80_5Fkursy-20walut-20nbp","componenttype":372,"componenttypeplatformname":"connector"}]}</CdsDependencies>
+      <IsCustomizable>1</IsCustomizable>
+      <BackgroundImageUri>/CanvasApps/cre80_testkonektorakurswwalut_9d02e_BackgroundImageUri</BackgroundImageUri>
+      <DocumentUri>/CanvasApps/cre80_testkonektorakurswwalut_9d02e_DocumentUri.msapp</DocumentUri>
+    </CanvasApp>
+  </CanvasApps>
+  <Connectors>
+    <Connector>
+      <connectorid>1612d9de-f47a-4837-8a8a-d48ac47ec0e2</connectorid>
+      <description>Kursy walut NBP</description>
+      <displayname>Kursy walut NBP</displayname>
+      <iconbrandcolor>#007ee5</iconbrandcolor>
+      <name>cre80_5Fkursy-20walut-20nbp</name>
+      <connectortype>1</connectortype>
+      <openapidefinition>/Connector/cre80_5Fkursy-20walut-20nbp_openapidefinition.json</openapidefinition>
+      <connectionparameters>/Connector/cre80_5Fkursy-20walut-20nbp_connectionparameters.json</connectionparameters>
+      <policytemplateinstances>/Connector/cre80_5Fkursy-20walut-20nbp_policytemplateinstances.json</policytemplateinstances>
+      <iconblob>/Connector/cre80_5Fkursy-20walut-20nbp_iconblob.Jpeg</iconblob>
+    </Connector>
+  </Connectors>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>
